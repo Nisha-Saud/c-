@@ -1,0 +1,41 @@
+# c-
+c++ codes are here
+#include<iostream>
+using namespace std;
+class array
+{
+    int a[10];
+    int i,n;
+    float avg;
+    public :
+    void input();
+    friend void average(array &a1);
+};
+void array::input()
+{
+    cout<<"Enter the number of elements";
+    cin>>n;
+    cout<<endl<<"Enter the array elements";
+    for(i=0;i<n;i++)
+    {
+        cin>>a[i];
+    }
+}
+void average(array &a1)
+{
+    int sum=0;
+    for(a1.i=0;a1.i<a1.n;a1.i++)
+    {
+      sum = sum + a1.a[a1.i];
+    }
+    a1.avg = sum/a1.n;
+    cout<<"Average of the array is : "<<a1.avg;
+}
+int main()
+{
+    system("cls");
+    array a1;
+    a1.input();
+    average( a1);
+    return 0;
+}
