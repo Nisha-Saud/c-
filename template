@@ -1,0 +1,20 @@
+#include<iostream>
+using namespace std;
+template <class T>
+T sum(T a ,T b)
+{ T sum;
+    sum = a+b;
+    return sum;
+}
+int sum(int c,int d)
+{
+    return (c+d);
+}
+int main()
+{
+    int a=5,b=8;
+    float c=4.5,d=5.6;
+    cout<<"The sum is "<<sum(a,b);
+    cout<<endl<<"The sum is "<<sum(c,d);
+    return 0;
+}
